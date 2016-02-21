@@ -98,7 +98,9 @@ The input JSON schema
 
 ##### `options`
 
-`baseFolder` - the base folder to get relative path files from. Default is `process.cwd()`
+- `baseFolder` - the base folder to get relative path files from. Default is `process.cwd()`
+
+- `keepLocalRefs` - Whether local `$ref`s like `"$ref": "#/definitions/foo"` should not dereferenced. Passing true will pull all `definitions` to the root of the resulting schema. Default is `false`
 
 ### deref.getRefPathValue(schema, refPath)
 
